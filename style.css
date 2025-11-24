@@ -1,0 +1,89 @@
+/* ---------- FONTES ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@400;600&display=swap');
+
+/* ---------- BASE ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at 10% 60%, #7A00FF 0%, #1B004E 40%, #000814 100%);
+    color: #E8F9FF;
+    overflow-x: hidden;
+}
+
+/* ---------- MENU ---------- */
+header {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #E8F9FF;
+    font-weight: 600;
+    font-size: 17px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Efeito neon no hover */
+.menu a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #00FFF0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* ---------- CONTEÚDO DA PÁGINA ---------- */
+.sobre-container {
+    max-width: 850px;
+    text-align: center;
+    margin: 90px auto;
+    animation: fadeIn 0.9s ease forwards;
+    padding: 0 20px;
+}
+
+/* ---------- Título futurista ---------- */
+.titulo {
+    background: linear-gradient(145deg, #00FFF0, #0AA5FF);
+    color: #003036;
+    width: fit-content;
+    padding: 12px 26px;
+    border-radius: 14px;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0 auto 35px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 12px #00FFF0;
+}
+
+/* ---------- Texto ---------- */
+.sobre-container p {
+    line-height: 1.7;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ---------- ANIMAÇÃO ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
