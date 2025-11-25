@@ -1,36 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre Nós</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<html lang="pt-BR">
 
-    <header>
-        <nav class="menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre_nós">Sobre Nós</a></li>
-                <li><a href="#serviços">Serviços</a></li>
-                <li><a href="#experiencias">Experiencias</a></li>
-                <li><a href="#equipe">Equipe</a></li>
-                <li><a href="#Fale_Conosco">Fale Conosco</a></li>
-                <li><a href="#login">Login</a></li>
-            </ul>
-        </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Título que aparece na aba do navegador -->
+  <title>Sobre Nós — Empresa</title>
+
+  <!-- Ligação com o arquivo de estilos externos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <!-- Conteúdo principal do site -->
+  <main class="site">
+
+    <!-- ========================================================= -->
+    <!-- HERO / CABEÇALHO PRINCIPAL COM TÍTULO E FRASE DE IMPACTO -->
+    <!-- ========================================================= -->
+    <header class="hero" role="banner" aria-hidden="false">
+      <div class="hero-content">
+        <!-- Título da página -->
+        <h1 class="title">Sobre Nós</h1>
+
+        <!-- Subtítulo curto e impactante -->
+        <p class="subtitle">Empresa feita por pessoas, para pessoas.</p>
+      </div>
     </header>
 
-    <main class="sobre-container">
-        <h1 class="titulo">Sobre nós</h1>
 
-        <p>
-            Somos uma empresa movida pela ideia de que tecnologia só faz sentido quando aproxima pessoas.
-            Atuamos no desenvolvimento de sistemas, na criação de experiências digitais, no marketing estratégico
-            e na segurança da informação — sempre com foco em inovação, clareza e resultados reais.
-        </p>
-    </main>
+    <!-- ========================================================= -->
+    <!-- SEÇÃO "SOBRE NÓS" -->
+    <!-- ========================================================= -->
+    <section class="about" aria-labelledby="about-title">
+      <div class="container">
+
+        <!-- Esse h2 não aparece visualmente (sr-only), mas ajuda na acessibilidade -->
+        <h2 id="about-title" class="sr-only">Sobre nós</h2>
+
+        <!-- Card que centraliza e organiza o conteúdo -->
+        <div class="card">
+
+          <!-- Primeira frase de impacto -->
+          <p class="lead">
+            <strong>Somos uma equipe apaixonada por tecnologia e por quem usa tecnologia.</strong>
+          </p>
+
+          <!-- Texto explicando visão e objetivo -->
+          <p>
+            Acreditamos que soluções digitais servem para simplificar vidas e abrir novas possibilidades.
+            Trabalhamos com foco em experiência, clareza e impacto real — entregando produtos úteis, acessíveis
+            e fáceis de usar.
+          </p>
+
+          <!-- Lista que explica como a empresa trabalha -->
+          <ul class="how">
+            <li><strong>Escutamos</strong> antes de projetar;</li>
+            <li><strong>Co-criamos</strong> soluções junto aos usuários;</li>
+            <li><strong>Entregamos</strong> com qualidade e transparência;</li>
+            <li><strong>Evoluímos</strong> com feedback constante.</li>
+          </ul>
+
+          <!-- Conclusão da seção -->
+          <p class="closing">
+            Nosso objetivo é simples: fazer com que a tecnologia gere resultados reais para pessoas e negócios.
+            Se quiser conhecer nossos projetos ou conversar sobre uma ideia, vamos conversar!
+          </p>
+
+          <!-- Botões para ação -->
+          <div class="cta">
+            <a href="#contato" class="btn">Fale conosco</a>
+            <a href="#projetos" class="link">Ver projetos</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================================= -->
+    <!-- RODAPÉ -->
+    <!-- ========================================================= -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container small">
+        © <span id="year"></span> Sua Empresa — Tecnologia com propósito
+      </div>
+    </footer>
+
+  </main>
+
+
+  <!-- ========================================================= -->
+  <!-- SCRIPT: ATUALIZA O ANO DO RODAPÉ AUTOMATICAMENTE -->
+  <!-- ========================================================= -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
