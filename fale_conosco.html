@@ -23,10 +23,7 @@
       <label for="email">E-mail:</label>
       <input type="email" id="email" placeholder="exemplo@email.com" required>
 
-      <label for="telefone">Telefone:</label>
-      <input type="tel" id="telefone" placeholder="(DDD) 99999-9999">
-
-      <label for="mensagem"> Qual problema enfrenta ? </label>
+      <label for="mensagem"> oque podemos melhorar no site ? </label>
       <textarea id="mensagem" placeholder="Escreva oque deseja ou seu interesse..." required></textarea>
 
       <button type="submit">Enviar</button>
@@ -44,10 +41,12 @@
   <script>
     function enviar(event) {
       event.preventDefault();
-      alert("✅ enviado com sucesso! Entraremos em contato em breve.");
+      alert("✅ enviado com sucesso! Vamos analisar sua sujestão.");
       document.querySelector("form").reset();
     }
   </script>
 
 </body>
 </html>
+
+
