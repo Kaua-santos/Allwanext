@@ -18,3 +18,28 @@ body {
     color: var(--branco);
     scroll-behavior: smooth;
 }
+.header {
+    width:100%;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    gap: 45px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 35px;
+    border-radius: 40px;
+    backdrop-filter: blur(6px);
+    border:1px solid rgba(0,255, 255, 0.3);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+}
+
+.navbar a :hover {
+    text-decoration: none;
+    color:var(--branco);
+    font-size: 17px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
