@@ -7,8 +7,8 @@
 }
 
 * {
-    margin: 0
-    padding 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -36,10 +36,51 @@ body {
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
 }
 
-.navbar a :hover {
+.navbar a {
     text-decoration: none;
     color:var(--branco);
     font-size: 17px;
     letter-spacing: 1px;
     transition: 0.3s;
+}
+.navbar a:hover {
+    color:var(--ciano);
+    text-shadow: 0 0 12px var(--ciano);
+}
+.hero{
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.title {
+    font: size 95px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: var(--ciano);
+    text-shadow: 0 0 18px var(--ciano), 0 0 40px rgba(0, 255, 255, 0.3);
+}
+.subtitle {
+    margin-top: 12px;
+    font-size: 24px;
+    opacity: 0.85;
+}
+.btn {
+    margin-top: 35px;
+    padding: 14px 40px;
+    border-radius: 40px;
+    border: 2px solid var(--ciano);
+    background: transparent;
+    color: var(--ciano);
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover{
+    background: var(--ciano);
+    color: var(--roxo);
+    box-shadow: 0 0 18px var(--ciano);
 }
