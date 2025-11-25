@@ -1,19 +1,11 @@
 body {
   margin: 0;
   font-family: "SF Pro Display", Arial, Helvetica, sans-serif;
-  background-color: #001b66fb; /* cinza escuro */
+   background: linear-gradient(130deg, #2c0164, #002a9e, #8a008a, #4c0063 );/* cinza escuro */
   color: #e6e6e6;
   text-align: center;
 }
 
-header {
-  background: linear-gradient(135deg, #bd02bd, #003674, #bd02bd ); /* roxo -> azul */
-  color: rgb(255, 255, 255);
-  padding: 25px;
-  font-size: 26px;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
 
 .formulario {
   max-width: 600px;
@@ -28,7 +20,7 @@ header {
 .formulario h2 {
   text-align: center;
   margin-bottom: 25px;
-  color: #000000; /* roxo */
+  color: #000000;
 }
 
 label {
@@ -49,7 +41,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  border-color: #00eaff; /* ciano */
+  border-color: #000000; 
 }
 
 textarea {
@@ -59,7 +51,7 @@ textarea {
 
 button {
   width: 100%;
-  background: linear-gradient(135deg, #003674, #b616ae, #003674 ); /* roxo -> ciano */
+  background: linear-gradient(135deg, #003674, #b616ae, #003674 ); 
   color: white;
   border: none;
   padding: 14px;
@@ -73,22 +65,63 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(135deg, #540a9a, #6200ff); /* roxo escuro -> ciano escuro */
+  background: linear-gradient(135deg, #540a9a, #6200ff); 
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 234, 255, 0.35);
+  box-shadow: 0 6px 15px rgba(0, 145, 158, 0.35);
 }
 
 .voltar {
   display: inline-block;
   margin-top: 20px;
   text-decoration: none;
-  color: #0084ff; /* ciano */
+  color: #0084ff; 
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .voltar:hover {
-  color: #00eeff; /* roxo */
+  color: #00eeff; 
+  
 }
 
+header.topo {
+  display: flex;
+  align-items: center;
+  gap: 730px; /* espaço entre logo e texto */
+  background: linear-gradient(135deg, #bd02bd, #003674, #bd02bd );
+  color: white;
+  padding: 20px 30px;
+  font-size: 26px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+header.topo .logo {
+  height: 65px;
+  width: auto;
+}
+
+header.topo .nome-site {
+  user-select: none;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Poppins", Arial, sans-serif;
+    color: #000000;
+    background: linear-gradient(145deg, #190072, #300046, #6900d1, #a5a5a5);
+    background-size: 260% 260%;
+    animation: gradientFlow 12s ease infinite;
+    text-align:center;
+}
+@keyframes gradientFlow{
+    0%{background-position:5% 55%}
+    50%{background-position:100% 50%}
+    100%{background-position:5% 55%}
+}
 
