@@ -1,6 +1,6 @@
-/* ========================================================= */
+
 /* ========== VARIÁVEIS GLOBAIS (cores, espaçamentos) ====== */
-/* ========================================================= */
+
 :root{
   --bg-1: #0f1330;                 /* Cor principal de fundo */
   --accent: #06d6d6;               /* Cor de destaque para botões e detalhes */
@@ -12,9 +12,9 @@
   --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* ========================================================= */
+
 /* ========== RESET BÁSICO PARA EVITAR PADRÕES ========= */
-/* ========================================================= */
+
 *{
   box-sizing:border-box;           /* Garante que largura inclui preenchimento e bordas */
 }
@@ -40,17 +40,17 @@ body{
   padding:32px 20px;                /* Espaçamento nas bordas da tela */
 }
 
-/* ========================================================= */
+
 /* CONTAINER GERAL DO SITE */
-/* ========================================================= */
+
 .site{
   width:100%;
   max-width:1200px;                 /* Largura máxima da página */
 }
 
-/* ========================================================= */
+
 /* HERO — CABEÇALHO VISUAL COM IMAGEM E TÍTULO */
-/* ========================================================= */
+
 .hero{
   border-radius:16px; /* Cantos arredondados */
   padding:48px 24px;  /* Espaçamento interno */
@@ -112,9 +112,9 @@ body{
   font-size:1rem;
 }
 
-/* ========================================================= */
+
 /* SECTION ABOUT — ÁREA DE CONTEÚDO PRINCIPAL */
-/* ========================================================= */
+
 .about .container{
   max-width:var(--max-width);
   margin:0 auto;
@@ -144,9 +144,9 @@ body{
   color:#e6ecf5;
 }
 
-/* ========================================================= */
+
 /* LISTA QUE MOSTRA O "COMO TRABALHAMOS" EM QUADRINHOS */
-/* ========================================================= */
+
 .how{
   list-style:none;     /* Remove bolinha padrão */
   padding:0;
@@ -164,9 +164,9 @@ body{
   color:var(--muted);
 }
 
-/* ========================================================= */
+
 /* CTA — BOTÕES DE AÇÃO (Fale Conosco / Projetos) */
-/* ========================================================= */
+
 .cta{
   margin-top:14px;
   display:flex;
@@ -195,9 +195,9 @@ body{
   font-weight:600;
 }
 
-/* ========================================================= */
+
 /* RODAPÉ */
-/* ========================================================= */
+
 .site-footer{
   margin-top:22px;
   text-align:center;
@@ -211,9 +211,9 @@ body{
   padding:12px 0;
 }
 
-/* ========================================================= */
+
 /* CLASSE PARA CONTEÚDO SOMENTE PARA TECNOLOGIAS ASSISTIVAS */
-/* ========================================================= */
+
 .sr-only{
   position:absolute!important;
   width:1px;
@@ -226,9 +226,9 @@ body{
   border:0;
 }
 
-/* ========================================================= */
+
 /* RESPONSIVIDADE — TELAS MÉDIAS */
-/* ========================================================= */
+
 @media (max-width:800px){
   .how{
     grid-template-columns: 1fr; /* Lista vira coluna única */
@@ -246,9 +246,9 @@ body{
   }
 }
 
-/* ========================================================= */
+
 /* RESPONSIVIDADE — TELAS PEQUENAS (CELULAR) */
-/* ========================================================= */
+
 @media (max-width:480px){
   body{
     padding:22px 12px;
