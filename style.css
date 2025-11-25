@@ -3,8 +3,18 @@
     --ciano:#00f7ff;
     --roxo:#460d9b;
     --roxo2:#6a07f5;
+    --branco:#ffffff;
+}
 
+* {
+    margin: 0
+    padding 0;
+    box-sizing: border-box;
+}
 
-
-
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(140deg, var(--roxo), var(--roxo2));
+    color: var(--branco);
+    scroll-behavior: smooth;
 }
