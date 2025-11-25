@@ -29,7 +29,7 @@ body{
   background: linear-gradient(
       180deg,
       var(--bg-1) 0%,
-      #07122a 60%
+      #150033 60%
   );                                /* Fundo com gradiente */
   color: #eef2f7;                   /* Cor padrão do texto */
   -webkit-font-smoothing:antialiased;
@@ -63,12 +63,12 @@ body{
     linear-gradient(
       90deg,
       rgba(6,13,40,0.7),
-      rgba(3,6,12,0.7)
+      rgba(18, 2, 88, 0.815)
     ),
     url("/mnt/data/9999b812-a028-4301-b903-91afca7735df.png")
     left center / cover no-repeat;
 
-  box-shadow: 0 8px 40px rgba(0,0,0,0.6); /* Sombra forte */
+  box-shadow: 0 8px 40px rgba(26, 2, 36, 0.815); /* Sombra forte */
   display:flex;
   align-items:center;
   min-height:180px;
@@ -126,7 +126,7 @@ body{
   padding:26px;
   border-radius:var(--radius);
   border:1px solid rgba(255,255,255,0.04);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(3, 14, 109, 0.836);
   text-align:left;
 }
 
@@ -182,7 +182,7 @@ body{
   padding:10px 18px;
   border-radius:999px;
   background: linear-gradient(90deg,var(--accent), #00bfbf);
-  color:#021313;
+  color:#0b4d4d;
   text-decoration:none;
   font-weight:700;
   box-shadow: 0 8px 30px rgba(6,214,214,0.12);
