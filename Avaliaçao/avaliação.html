@@ -41,7 +41,7 @@
   <!-- Abas de navegação entre lista e novo envio -->
   <div class="tabs">
     <div class="tab active" data-tab="lista">Avaliações</div>
-    <div class="tab" data-tab="nova">Nova Avaliação</div>
+    <div class="tab" data-tab="nova">Adicionar Avaliação</div>
   </div>
 
   <!-- Painel da lista de avaliações -->
@@ -109,10 +109,15 @@
   });
 
   // Lista inicial de avaliações de exemplo
-  const lista = [
-    { nome: "João", nota: 5, msg: "Muito bom!" },
-    { nome: "Marina", nota: 4, msg: "Gostei bastante." }
-  ];
+   const lista = [
+  { nome: "João", nota: 5, msg: "Muito bom!" },
+  { nome: "Marina", nota: 4, msg: "Gostei bastante." },
+
+  { nome: "TechNova Systems", nota: 5, msg: "Atendimento excelente! A AllwaNext realmente entende o que o cliente precisa." },
+  { nome: "ByteWave Solutions", nota: 4, msg: "Serviço muito bem executado. A equipe foi ágil e entregou exatamente o que prometeu." },
+  { nome: "NexuSpark Digital", nota: 5, msg: "Experiência incrível! Profissionalismo, rapidez e comunicação impecável." }
+];
+
 
   // Função que renderiza a lista de avaliações na tela
   function render() {
