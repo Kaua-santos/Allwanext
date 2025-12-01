@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "SF Pro Display", Arial, Helvetica, sans-serif;
-   background: linear-gradient(130deg, #2c0164, #002a9e, #8a008a, #4c0063 );/* cinza escuro */
+   background: linear-gradient(130deg, #14035c, #002a9e, #8a008a, #4c0063 );/* cinza escuro */
   color: #e6e6e6;
   text-align: center;
 }
@@ -51,7 +51,7 @@ textarea {
 
 button {
   width: 100%;
-  background: linear-gradient(135deg, #003674, #b616ae, #003674 ); 
+  background: linear-gradient(135deg, #1c003b, #090058, #000000 ); 
   color: white;
   border: none;
   padding: 14px;
@@ -65,7 +65,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(135deg, #540a9a, #6200ff); 
+  background: linear-gradient(135deg, #00e1ff59, #00ccff44); 
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 145, 158, 0.35);
 }
@@ -88,7 +88,7 @@ header.topo {
   display: flex;
   align-items: center;
   gap: 730px; /* espaço entre logo e texto */
-  background: linear-gradient(135deg, #bd02bd, #003674, #bd02bd );
+  background: linear-gradient(135deg, #000000, #000a94, #000000 );
   color: white;
   padding: 20px 30px;
   font-size: 26px;
@@ -113,8 +113,8 @@ header.topo .nome-site {
 
 body{
     font-family: "Poppins", Arial, sans-serif;
-    color: #000000;
-    background: linear-gradient(145deg, #190072, #300046, #6900d1, #a5a5a5);
+    color: #ffffff;
+    background: linear-gradient(145deg, #030b36, #080055, #0f03b4, #170022);
     background-size: 260% 260%;
     animation: gradientFlow 12s ease infinite;
     text-align:center;
