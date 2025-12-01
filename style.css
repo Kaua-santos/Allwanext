@@ -2,7 +2,7 @@
 /* ========== VARIÁVEIS GLOBAIS (cores, espaçamentos) ====== */
 
 :root{
-  --bg-1: #0f1330;                 /* Cor principal de fundo */
+  --bg-1: #111b6b;                 /* Cor principal de fundo */
   --accent: #06d6d6;               /* Cor de destaque para botões e detalhes */
   --muted: #bfc7d6;                /* Cor usada para textos suaves */
   --card-bg: rgba(255,255,255,0.03); /* Fundo transparente usado nas caixas */
