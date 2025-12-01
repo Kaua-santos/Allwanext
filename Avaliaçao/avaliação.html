@@ -1,0 +1,152 @@
+<!--
+  Este arquivo HTML exibe uma página com avaliações e um formulário
+  para enviar novas avaliações. Também inclui abas para navegar entre
+  a lista de avaliações e o formulário.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Metadados obrigatórios para charset e responsividade -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Título da página -->
+  <title>Avaliações</title>
+
+  <!-- Importação do arquivo CSS externo -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .logo {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Logo no canto superior direito -->
+<div class="logo">Allwanext</div>
+
+<!-- Título principal da página -->
+<h1>Avaliações</h1>
+
+<!-- Card principal que contém abas e conteúdo -->
+<div class="card">
+
+  <!-- Abas de navegação entre lista e novo envio -->
+  <div class="tabs">
+    <div class="tab active" data-tab="lista">Avaliações</div>
+    <div class="tab" data-tab="nova">Nova Avaliação</div>
+  </div>
+
+  <!-- Painel da lista de avaliações -->
+  <div id="lista" class="panel active">
+    <!-- Conteúdo das avaliações será inserido via JavaScript -->
+    <div id="reviews"></div>
+  </div>
+
+  <!-- Painel do formulário de nova avaliação -->
+  <div id="nova" class="panel">
+    <form id="form">
+
+      <!-- Campo nome -->
+      <label>Seu nome:</label>
+      <input type="text" id="nome">
+
+      <!-- Área de estrelas clicáveis para nota -->
+      <label>Nota:</label>
+      <div class="stars" id="rating">
+        <span data-v="1">★</span>
+        <span data-v="2">★</span>
+        <span data-v="3">★</span>
+        <span data-v="4">★</span>
+        <span data-v="5">★</span>
+      </div>
+
+      <!-- Campo comentário -->
+      <label>Comentário:</label>
+      <textarea id="coment"></textarea>
+
+      <!-- Botão para enviar avaliação -->
+      <button>Enviar</button>
+    </form>
+  </div>
+
+</div>
+
+<script>
+  // Valor padrão da nota selecionada
+  let notas = 5;
+
+  // Captura todas as estrelas
+  const stars = document.querySelectorAll("#rating span");
+
+  // Div onde as avaliações são exibidas
+  const reviewsDiv = document.getElementById("reviews");
+
+  // Função para ativar seleção visual das estrelas
+  stars.forEach(s => {
+    s.onclick = () => {
+      notas = s.dataset.v;
+      stars.forEach(x => x.style.opacity = x.dataset.v <= notas ? 1 : .3);
+    };
+  });
+
+  // Controle de abas (ativa/desativa painéis)
+  document.querySelectorAll(".tab").forEach(t => {
+    t.onclick = () => {
+      document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+
+      t.classList.add("active");
+      document.getElementById(t.dataset.tab).classList.add("active");
+    };
+  });
+
+  // Lista inicial de avaliações de exemplo
+  const lista = [
+    { nome: "João", nota: 5, msg: "Muito bom!" },
+    { nome: "Marina", nota: 4, msg: "Gostei bastante." }
+  ];
+
+  // Função que renderiza a lista de avaliações na tela
+  function render() {
+    reviewsDiv.innerHTML = lista.map(r => `
+      <div class="review">
+        <strong>${r.nome}</strong> — ${r.nota}★
+        <p>${r.msg}</p>
+      </div>
+    `).join("");
+  }
+
+  // Renderiza avaliações iniciais
+  render();
+
+  // Controle do envio do formulário
+  form.onsubmit = (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value || "Anônimo";
+    const msg = document.getElementById("coment").value;
+
+    // Adiciona nova avaliação ao início da lista
+    lista.unshift({ nome, nota: notas, msg });
+    render();
+
+    // Limpa formulário e reseta estrelas
+    form.reset();
+    notas = 5;
+    stars.forEach(x => x.style.opacity = 1);
+
+    // Volta para a aba de lista após enviar
+    document.querySelector("[data-tab='lista']").click();
+  };
+</script>
+
+</body>
+</html>

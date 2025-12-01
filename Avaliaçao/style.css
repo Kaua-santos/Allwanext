@@ -1,0 +1,146 @@
+/* ================= ESTILO GERAL DA PÁGINA =================
+   Define cor de fundo, fonte básica e cor padrão do texto.
+   Deixa o visual escuro e moderno. */
+body {
+  background: #16043f;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Título principal da página */
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ================= CARD PRINCIPAL =================
+   Caixa central onde ficam as abas, avaliações e formulário.
+   Usa glassmorphism leve com blur e transparência. */
+.card {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ================= LOGO SUPERIOR DIREITA =================
+   Mostra a marca "AllwaNext" no topo, em branco e negrito. */
+.logo {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= ABAS =================
+   São usadas para alternar entre a lista e o formulário.
+   A aba ativa muda de cor e ganha linha inferior. */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 15px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #aaa;
+}
+
+.tab.active {
+  color: #fff;
+  border-bottom: 3px solid #00d4ff;
+}
+
+/* ================= PAINÉIS =================
+   Apenas o painel ativo é exibido. */
+.panel {
+  display: none;
+}
+.panel.active {
+  display: block;
+}
+
+/* ================= LISTA DE AVALIAÇÕES =================
+   Cada avaliação é exibida como um card interno. */
+.review {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.review strong {
+  color: #00d4ff; /* Nome do usuário destacado */
+}
+
+/* ================= FORMULÁRIO =================
+   Campos de texto e textarea estilizados com transparência.
+   Mantém visual coerente com o tema escuro. */
+form label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* ================= ESTRELAS =================
+   Estrelas clicáveis para selecionar a nota.
+   Mudam de opacidade conforme a nota escolhida. */
+.stars span {
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 4px;
+  opacity: .3;
+  transition: .2s;
+}
+
+.stars span:hover {
+  opacity: 1;
+}
+
+/* ================= BOTÃO DE ENVIO =================
+   Botão com destaque azul neon para combinar com estilo tecnológico. */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #00d4ff;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: .2s;
+}
+
+button:hover {
+  background: #00aacc; /* Tom mais escuro ao passar o mouse */
+}
