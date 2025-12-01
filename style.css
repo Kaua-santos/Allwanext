@@ -4,9 +4,9 @@ html {
 
 /* ====== CONFIGURAÇÕES GERAIS ====== */
 :root {
-    --ciano:#04c5cc;
-    --roxo:#14161b;
-    --roxo2:#030b36;
+    --ciano:#33d1d6;
+    --roxo:#5a19af;
+    --roxo2:#010729;
     --branco:#ffffff;
 }
 
@@ -41,9 +41,9 @@ body {
 }
 
 .logo {
-    height: 55px;
+    height: 90px;
     width: auto;
-    filter: drop-shadow(0 0 6px rgba(6, 94, 94, 0.4));
+    filter: drop-shadow(0 0 6px rgba(0,255,255,0.4));
 }
 
 /* ===== NAVBAR ===== */
@@ -114,6 +114,63 @@ body {
     color: var(--roxo);
     box-shadow: 0 0 18px var(--ciano);
 }
+/* ===== SOBRE NÓS ===== */
+.sobre-section {
+    padding: 120px 10%;
+    text-align: center;
+    background: var(--azul-escuro); /* mantém coerência com seu tema */
+    color: var(--branco);
+}
+
+.sobre-section h2 {
+    font-size: 3rem;
+    color: var(--ciano);
+    text-shadow: 0 0 15px var(--ciano);
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.sobre-section p {
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+/* CARDS DE AVALIAÇÃO */
+.avaliacoes {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.avaliacoes .card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    padding: 25px;
+    width: 280px;
+    border-radius: 18px;
+    backdrop-filter: blur(8px);
+    transition: 0.3s ease;
+    box-shadow: 0 0 12px rgba(0,255,255,0.1);
+}
+
+.avaliacoes .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px var(--ciano);
+}
+
+.avaliacoes .card h3 {
+    color: var(--ciano);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.avaliacoes .card p {
+    opacity: 0.95;
+    font-size: 1.1rem;
+}
+
 
 /* ===== ANIMAÇÃO DE FUNDO EM ONDA SUAVE ===== */
 @keyframes gradientWave {
@@ -133,64 +190,23 @@ body {
         background-position: 0% 50%;
     }
 }
-/* ===== SOBRE NÓS ===== */
-.sobre-nos {
-    padding: 100px 10%;
+/* ===== SEÇÃO MEMBROS ===== */
+.membros-section {
+    padding: 120px 80px;
     text-align: center;
 }
 
-.sobre-title {
-    font-size: 60px;
-    font-weight: 700;
+.membros-title {
+    font-size: 48px;
     color: var(--ciano);
-    letter-spacing: 4px;
-    text-shadow: 0 0 20px var(--ciano);
-    margin-bottom: 35px;
+    text-shadow: 0 0 14px var(--ciano);
+    margin-bottom: 18px;
 }
 
-.sobre-texto {
-    max-width: 900px;
+.membros-subtitle {
+    font-size: 12px;
+    opacity: 0.85;
+    max-width: 800px;
     margin: 0 auto;
-    margin-bottom: 20px;
-    font-size: 20px;
-    opacity: 0.85;
-    line-height: 1.6;
-}
-
-/* Cards futuristas */
-.sobre-cards {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    flex-wrap: wrap;
-}
-
-.sobre-card {
-    width: 280px;
-    padding: 30px 25px;
-    border-radius: 18px;
-    border: 1px solid rgba(0, 255, 255, 0.25);
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 0 15px rgba(0,255,255,0.15);
-    transition: 0.3s ease;
-}
-
-.sobre-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 20px var(--ciano);
-}
-
-.sobre-card h3 {
-    font-size: 28px;
-    margin-bottom: 12px;
-    color: var(--ciano);
-    text-shadow: 0 0 12px var(--ciano);
-}
-
-.sobre-card p {
-    opacity: 0.85;
-    font-size: 17px;
 }
 
