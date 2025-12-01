@@ -2,8 +2,8 @@ body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #07070f, #002350);
-      color: #777777;
+      background: linear-gradient(135deg, #00003d, #002350);  /* faz um degrade animado no backgroung */
+      color: #6e008a;
     }
 
     header {
@@ -30,7 +30,7 @@ body {
 
     .card {
       flex: 1 1 300px;
-      background-color: white;
+      background-color: rgb(255, 255, 255);
       padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
