@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fale conosco</title>
+  <title>Reclamação</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>Fale conosco </header>
+  <header>Qual o seu problema </header>
 
   <section class="formulario">
     <h2>Entre em Contato com a gente</h2>
@@ -23,8 +23,8 @@
       <label for="telefone">Telefone:</label>
       <input type="tel" id="telefone" placeholder="(DDD) 99999-9999">
 
-      <label for="mensagem"> qual serviço deseja ? </label>
-      <textarea id="mensagem" placeholder="Escreva oque deseja ou seu interesse..." required></textarea>
+      <label for="mensagem"> Qual problema anda enfentando ? </label>
+      <textarea id="mensagem" placeholder="Escreva os problemas que está enfrentando com nosso site..." required></textarea>
 
       <button type="submit">Enviar</button>
     </form>
@@ -35,7 +35,7 @@
   <script>
     function enviar(event) {
       event.preventDefault();
-      alert("✅ enviado com sucesso! Entraremos em contato em breve.");
+      alert("✅ enviado com sucesso! Vamos analisar seu problema e tentar resolver.");
       document.querySelector("form").reset();
     }
   </script>
