@@ -206,11 +206,3 @@ body {
     text-shadow: 0 0 14px var(--ciano);
     margin-bottom: 18px;
 }
-
-.membros-subtitle {
-    font-size: 12px;
-    opacity: 0.85;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
