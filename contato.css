@@ -2,7 +2,7 @@ body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #00003d, #002350);
+      background: linear-gradient(135deg, #00003d, #002350);  /* faz um degrade animado no backgroung */
       color: #6e008a;
     }
 
