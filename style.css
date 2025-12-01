@@ -17,6 +17,7 @@ html {
 }
 
 body {
+    padding-top: 100px;
     font-family: "Segoe UI", sans-serif;
     background: linear-gradient(140deg, var(--roxo), var(--roxo2), var(--roxo));
     background-size: 300% 300%;
@@ -28,11 +29,14 @@ body {
 
 /* ===== HEADER E LOGO ===== */
 .header {
-    width:95%;
+    position: fixed;
+    top:0;
+    width:89%;
+    z-index: 1000;
     padding: 25px 60px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
 }
 
 .logo-area {
