@@ -130,13 +130,14 @@
   render();
 
   // Controle do envio do formulário
+
   form.onsubmit = (e) => {
     e.preventDefault();
 
     const nome = document.getElementById("nome").value || "Anônimo";
     const msg = document.getElementById("coment").value;
 
-    // Adiciona nova avaliação ao início da lista
+    // Adiciona nova avaliação ao início da lista / mas ela existe apenas na memória do navegador e se recarregar a página irá sumir a avaliação 
     lista.unshift({ nome, nota: notas, msg });
     render();
 
