@@ -1,208 +1,134 @@
-html {
-  scroll-behavior: smooth;
-}
-
-/* ====== CONFIGURAÇÕES GERAIS ====== */
-:root {
-    --ciano:#33d1d6;
-    --roxo:#5a19af;
-    --roxo2:#010729;
-    --branco:#ffffff;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* ===== ESTILO GLOBAL ===== */
 body {
-    padding-top: 100px;
-    font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(140deg, var(--roxo), var(--roxo2), var(--roxo));
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    color: #ffffff;
+    background: linear-gradient(140deg, #0c021a, #020b3d, #5a19af);
     background-size: 300% 300%;
-    animation: gradientWave 7s ease-in infinite;
-    color: var(--branco);
+    animation: gradientWave 10s ease-in-out infinite;
+    text-align: center;
 }
 
+@keyframes gradientWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-
-/* ===== HEADER E LOGO ===== */
+/* ===== HEADER ===== */
 .header {
-    position: fixed;
-    top:0;
-    width:89%;
-    z-index: 1000;
-    padding: 25px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-}
-
-.logo-area {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.logo {
-    height: 90px;
+.header .logo {
+    height: 100px;
     width: auto;
-    filter: drop-shadow(0 0 6px rgba(0,255,255,0.4));
-}
-
-/* ===== NAVBAR ===== */
-.navbar {
-    display: flex;
-    gap: 45px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 12px 35px;
-    border-radius: 40px;
-    backdrop-filter: blur(6px);
-    border:1px solid rgba(0,255, 255, 0.3);
-    box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
-    margin: 0 auto;
 }
 
 .navbar a {
+    color: #ffffff;
     text-decoration: none;
-    color:var(--branco);
-    font-size: 17px;
-    letter-spacing: 1px;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color:var(--ciano);
-    text-shadow: 0 0 12px var(--ciano);
+    color: #33d1d6;
 }
 
 /* ===== HERO ===== */
-.hero{
-    height: 88vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.hero {
+    padding: 120px 20px 80px 20px;
 }
 
-.title {
-    font-size: 95px;
-    font-weight: 800;
-    letter-spacing: 6px;
-    color: var(--ciano);
-    text-shadow: 0 0 18px var(--ciano), 0 0 40px rgba(0, 255, 255, 0.3);
-}
-
-.subtitle {
-    margin-top: 12px;
-    font-size: 24px;
-    opacity: 0.85;
-}
-
-.btn {
-    margin-top: 35px;
-    padding: 14px 40px;
-    border-radius: 40px;
-    border: 2px solid var(--ciano);
-    background: transparent;
-    color: var(--ciano);
-    font-size: 18px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover{
-    background: var(--ciano);
-    color: var(--roxo);
-    box-shadow: 0 0 18px var(--ciano);
-}
-/* ===== SOBRE NÓS ===== */
-.sobre-section {
-    padding: 120px 10%;
-    text-align: center;
-    background: var(--azul-escuro); /* mantém coerência com seu tema */
-    color: var(--branco);
-}
-
-.sobre-section h2 {
-    font-size: 3rem;
-    color: var(--ciano);
-    text-shadow: 0 0 15px var(--ciano);
+.hero .title {
+    font-size: 4rem;
     margin-bottom: 20px;
-    letter-spacing: 3px;
+    text-shadow: 0 0 20px #33d1d6;
 }
 
-.sobre-section p {
-    font-size: 1.2rem;
-    opacity: 0.85;
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-/* CARDS DE AVALIAÇÃO */
-.avaliacoes {
-    margin-top: 50px;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #126697, #399fe4, #000000);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,234,255,0.25);
 }
 
-.avaliacoes .card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 255, 255, 0.3);
-    padding: 25px;
-    width: 280px;
-    border-radius: 18px;
-    backdrop-filter: blur(8px);
-    transition: 0.3s ease;
-    box-shadow: 0 0 12px rgba(0,255,255,0.1);
+.btn:hover {
+    background: linear-gradient(135deg, #00e1ff59, #00ccff44);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,145,158,0.35);
 }
 
-.avaliacoes .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 20px var(--ciano);
+/* ===== SEÇÕES ===== */
+section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 50px 30px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 10px 25px rgba(59,187,196,0.2);
 }
 
-.avaliacoes .card h3 {
-    color: var(--ciano);
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-}
-
-.avaliacoes .card p {
-    opacity: 0.95;
-    font-size: 1.1rem;
-}
-
-
-/* ===== ANIMAÇÃO DE FUNDO EM ONDA SUAVE ===== */
-@keyframes gradientWave {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 50% 60%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    75% {
-        background-position: 50% 40%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-/* ===== SEÇÃO MEMBROS ===== */
-.membros-section {
-    padding: 120px 80px;
+section h2 {
     text-align: center;
+    color: #33d1d6;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #33d1d6;
 }
 
-.membros-title {
-    font-size: 48px;
-    color: var(--ciano);
-    text-shadow: 0 0 14px var(--ciano);
-    margin-bottom: 18px;
+/* IFRAME */
+iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .hero .title {
+        font-size: 2.8rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 30px 15px;
+        margin: 40px auto;
+    }
+
+    iframe {
+        height: 600px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 }
