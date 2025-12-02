@@ -48,7 +48,7 @@
     <div id="reviews"></div>
   </div>
 
-  <!-- Painel do formulário de nova avaliação -->
+  <!-- Painel do formulário de uma nova avaliação -->
   <div id="nova" class="panel">
     <form id="form">
 
@@ -78,16 +78,17 @@
 </div>
 
 <script>
-  // Valor padrão da nota selecionada
+  // Valor máximo da nota selecionada
   let notas = 5;
 
-  // Captura todas as estrelas
+  // Captura todas as estrelas / ele pega todos os elementos span que estão dentro com o id rating.
   const stars = document.querySelectorAll("#rating span");
 
-  // Div onde as avaliações são exibidas
+  // Div onde as avaliações são exibidas / pega a div onde as avaliações aparecem
   const reviewsDiv = document.getElementById("reviews");
 
-  // Função para ativar seleção visual das estrelas
+  // Aqui ele pega cada estrela, adiciona um botão, depois de clicar ele salva o valor e aumenta a opacidade
+  // e reduz a opacidade das estrelas acima da nota
   stars.forEach(s => {
     s.onclick = () => {
       notas = s.dataset.v;
@@ -95,7 +96,8 @@
     };
   });
 
-  // Controle de abas (ativa/desativa painéis)
+  // Ele pega todos os elementos com classe .tab (as abas) e quando clica em uma aba,
+  // ele remove todas as abas e dos painéis e ativa somente a aba clicada
   document.querySelectorAll(".tab").forEach(t => {
     t.onclick = () => {
       document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
@@ -106,7 +108,7 @@
     };
   });
 
-  // Lista inicial de avaliações de exemplo
+  // Lista de exemplo das avaliaçoes
    const lista = [
   { nome: "TechNova Systems", nota: 5, msg: "Atendimento excelente! A AllwaNext realmente entende o que o cliente precisa." },
   { nome: "ByteWave Solutions", nota: 4, msg: "Serviço muito bem executado. A equipe foi ágil e entregou exatamente o que prometeu." },
@@ -115,7 +117,8 @@
 ];
 
 
-  // Função que renderiza a lista de avaliações na tela
+  //Percorre a lista de avaliação, cria um bloco HTML para cada avaliação, junta tudo em um único texto
+  // e coloca tudo dentro da div reviews
   function render() {
     reviewsDiv.innerHTML = lista.map(r => `
       <div class="review">
@@ -125,17 +128,18 @@
     `).join("");
   }
 
-  // Renderiza avaliações iniciais
+  // Renderiza avaliações iniciais / Chama a função acima para mostrar as avaliações na tela assim que o site carregar.
   render();
 
-  // Controle do envio do formulário
+  // Controle do envio do formulário / Impede que o formulário atualize a página ao enviar.
+  // E depois pega os dados  
   form.onsubmit = (e) => {
     e.preventDefault();
 
     const nome = document.getElementById("nome").value || "Anônimo";
     const msg = document.getElementById("coment").value;
 
-    // Adiciona nova avaliação ao início da lista
+    // Adiciona nova avaliação ao início da lista / Coloca a nova avaliação no início da lista e renderiza tudo
     lista.unshift({ nome, nota: notas, msg });
     render();
 

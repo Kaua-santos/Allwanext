@@ -1,6 +1,5 @@
-/* ================= ESTILO GERAL DA PÁGINA =================
-   Define cor de fundo, fonte básica e cor padrão do texto.
-   Deixa o visual escuro e moderno. */
+/*Aqui ele define o fundo roxo escuro, o texto branco, fonte padrão da pagina
+e remove as margens e espacamentos do navegador */
 body {
   background: #16043f;
   color: #fff;
@@ -9,7 +8,7 @@ body {
   padding: 0;
 }
 
-/* Título principal da página */
+/* Título principal / Centraliza o título da página e aumenta o tamanho da fonte */
 h1 {
   text-align: center;
   margin-top: 40px;
@@ -17,9 +16,9 @@ h1 {
   font-weight: bold;
 }
 
-/* ================= CARD PRINCIPAL =================
-   Caixa central onde ficam as abas, avaliações e formulário.
-   Usa glassmorphism leve com blur e transparência. */
+/* Card central 
+Ele cria um card com efeito glassmorphis (trasparêncial + blur (desfoque)
+Centraliza a tela e dá espacamento interno e bordas arredondadas */
 .card {
   width: 90%;
   max-width: 600px;
@@ -31,8 +30,7 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ================= LOGO SUPERIOR DIREITA =================
-   Mostra a marca "AllwaNext" no topo, em branco e negrito. */
+/* Posiciona a marca “AllwaNext” fixa no topo direito. */
 .logo {
   position: absolute;
   top: 15px;
@@ -43,15 +41,13 @@ h1 {
   font-family: Arial, sans-serif;
 }
 
-/* ================= ABAS =================
-   São usadas para alternar entre a lista e o formulário.
-   A aba ativa muda de cor e ganha linha inferior. */
+/*Ele coloca as abas do lado a lado e adiciona linha embaixo para separar*/
 .tabs {
   display: flex;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 15px;
 }
-
+/*Cada aba ocupa espaço igual e fica clicável e com estilo discreto*/
 .tab {
   flex: 1;
   text-align: center;
@@ -89,9 +85,7 @@ h1 {
   color: #00d4ff; /* Nome do usuário destacado */
 }
 
-/* ================= FORMULÁRIO =================
-   Campos de texto e textarea estilizados com transparência.
-   Mantém visual coerente com o tema escuro. */
+/* Aqui ele ajusta layout dos labels (um por linha). */
 form label {
   display: block;
   margin-top: 10px;
@@ -99,6 +93,7 @@ form label {
   font-weight: bold;
 }
 
+/* Campos transparentes. Bordas arredondadas. Tema escuro moderno. */
 input,
 textarea {
   width: 100%;
@@ -110,9 +105,7 @@ textarea {
   color: #fff;
 }
 
-/* ================= ESTRELAS =================
-   Estrelas clicáveis para selecionar a nota.
-   Mudam de opacidade conforme a nota escolhida. */
+/* Tem tamanho maior. Começa com opacidade baixa. É clicável. */
 .stars span {
   font-size: 22px;
   cursor: pointer;
@@ -121,12 +114,12 @@ textarea {
   transition: .2s;
 }
 
+/* Fica acesa ao passar o mouse. */
 .stars span:hover {
   opacity: 1;
 }
 
-/* ================= BOTÃO DE ENVIO =================
-   Botão com destaque azul neon para combinar com estilo tecnológico. */
+/*Botão neon azul, moderno, ocupando toda a largura. */
 button {
   width: 100%;
   padding: 12px;
@@ -140,7 +133,7 @@ button {
   margin-top: 10px;
   transition: .2s;
 }
-
+/* Escurece ao passar o mouse — efeito profissional. */
 button:hover {
   background: #00aacc; /* Tom mais escuro ao passar o mouse */
 }
